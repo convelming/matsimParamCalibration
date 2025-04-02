@@ -26,8 +26,8 @@ Because the goal is not using full population, it makes no sense comparing simul
 
 2. Confusion Matrix Evaluation 
    Labeled user group ground truth selectedIsMax defaultParam VS MNL VS CMA-ES
-   unlabeled users from full sample scenario vs 
-   所有分类评估指标都基于混淆矩阵（Confusion Matrix） ：
+   all users from full sample scenario sampled cma-es vs unsampled cma-es vs sampled MNL vs unsampled MNL  
+   所有分类评估指标都基于混淆矩阵（Confusion Matrix） ：  
     TP（True Positive） ：预测正确且为正类。 预测正确的样本数 
     TN（真负例） ：预测正确且为负类。  其他类别正确预测的样本数（通常用于二分类）
     FP（假正例/误报） ：将负类错误预测为正类。  实际不属于该类别但被误预测为该类别的样本数
