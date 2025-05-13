@@ -32,11 +32,21 @@ public class Evaluations {
             person.getPlans().forEach(plan -> {
                 List<Activity> activityList = new ArrayList<>();
                 List<Leg> legList = new ArrayList<>();
+                List<Integer> actIndex = new ArrayList<>();
                 for (int i = 0; i < plan.getPlanElements().size(); i++) {
                     PlanElement planElement = plan.getPlanElements().get(i);
-                    if (planElement instanceof Activity && !((Activity)planElement).getType().contains("interaction")) activityList.add((Activity) planElement);
-                    if (planElement instanceof Leg && !((Activity) plan.getPlanElements().get(i-1)).getType().contains("interaction")) legList.add((Leg) planElement);
+                    System.out.println(i);
+                    System.out.println(planElement);
+                    if (planElement instanceof Activity && !((Activity) planElement).getType().contains("interaction") ) {
+                        activityList.add((Activity) planElement);
+                    }
+                    if (planElement instanceof Leg ) {
+                        legList.add((Leg) planElement);
+                    }
                 }
+
+
+
                 for (int i = 0; i < activityList.size()-1; i++) {
 
                     String tmpBtwActs = activityList.get(i).getType()+"->"+activityList.get(i+1).getType();

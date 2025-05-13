@@ -32,7 +32,7 @@ public class Main {
         controler.addOverridingModule(new PlanParamCalibrationModule(config));
         config.qsim().setRemoveStuckVehicles(true);
         config.qsim().setStuckTime(5.0);
-        controler.getConfig().controler().setOverwriteFileSetting( OutputDirectoryHierarchy.OverwriteFileSetting.deleteDirectoryIfExists );
+        controler.getConfig().controller().setOverwriteFileSetting( OutputDirectoryHierarchy.OverwriteFileSetting.deleteDirectoryIfExists );
 //        controler.getConfig().controler().setOutputDirectory("/Users/convel/IdeaProjects/matsimParamCalibration/paramCalibration/outputOnlyWithCMAES0606");
         controler.getConfig().controler().setOutputDirectory("/Users/convel/desktop/cmaesWithBound1perC4Z0722");
 //        controler.getConfig().plans().setInputFile("/Users/convel/IdeaProjects/matsimParamCalibration/linkCount230427/pop/testPop.xml");
